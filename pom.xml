@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <name>Projeto exemplo para TCC do Renato</name>
-    <description>Projeto ${project.artifactId}.${project.version}</description>
+    <description>Projeto springboot-renato 1.0.0-SNAPSHOT</description>
 
     <organization>
         <name>FASAM - Faculdade Sul Americana</name>
