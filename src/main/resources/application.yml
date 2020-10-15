@@ -1,22 +1,33 @@
-  projet:
-    name: @project.artifactId@
-    version: @project.version@
-    description: @project.description@
+projet:
+    name: ${project.artifactId}
+    version: ${project.version}
+    description: ${projeto.description}
 
-  info:
-    artifact: @project.artifactId@
-    name: @project.name@
-    description: @project.description@
-    version: @project.version@
+info:
+    build:
+        artifact: @project.artifactId@
+        name: @project.name@
+        description: @project.description@
+        version: @project.version@
+
+---
+
+#Configuração do TOMCAT
+server:
+    servlet:
+        context-path: /
+    port: 8080
+    tomcat:
+        max-wait: 20000
+        max-active: 50
+        max-idle: 20
+        main-idle: 15
+
+spring:
+    output:
+        ansi:
+            enabled: always
 
 
-  ---
-
-  #Configuração do TOMCAT
-#  server:
-#    servlet:
-#      context-path: /
-#    port: 8080
-#    tomcat:
-#      max-wait: 20000
-#      ma
+controller:
+    user-get: Método responsável para exibir dos dados do usuário.
