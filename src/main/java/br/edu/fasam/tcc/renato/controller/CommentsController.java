@@ -2,7 +2,6 @@ package br.edu.fasam.tcc.renato.controller;
 
 import br.edu.fasam.tcc.renato.interfaces.IController;
 import br.edu.fasam.tcc.renato.model.Comments;
-import br.edu.fasam.tcc.renato.model.Post;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -27,7 +26,7 @@ public class CommentsController implements IController<Comments, Integer> {
 
     @Override
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-    @ApiOperation(value="${controller.comments-get}", notes="Exibe dados do comments.")
+    @ApiOperation(value="${controller.comment-get}", notes="Exibe dados do comments.")
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Registro entregue com sucesso.", response = Comments.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comments.class),
