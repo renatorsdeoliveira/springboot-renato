@@ -31,3 +31,6 @@ spring:
 
 controller:
     user-get: Método responsável para exibir dos dados do usuário.
+    post-get: Método responsável para exibir dos dados do post.
+    comments-get: Método responsável para exibir dos dados do comments.
+
