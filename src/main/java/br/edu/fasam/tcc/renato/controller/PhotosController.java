@@ -8,9 +8,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Api(value="Operações para manipulação dos dados de photos", tags = "photos, fotos, photo, foto")
@@ -18,6 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class PhotosController implements IController<Photos, Integer> {
 
     @Override
+    @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="${controller.photo-post}", notes="Criar dados do usuário.")
+    @ApiResponses(value={
+            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Photos.class),
+            @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photos.class),
+            @ApiResponse(code = 401, message = "Não autorizado.", response = Photos.class),
+            @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photos.class),
+            @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Photos.class)
+    })
     public ResponseEntity<?> create(Photos entity) {
         return null;
     }
@@ -40,6 +47,15 @@ public class PhotosController implements IController<Photos, Integer> {
     }
 
     @Override
+    @PutMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="${controller.photo-put}", notes="Atualizar dados do usuário.")
+    @ApiResponses(value={
+            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photos.class),
+            @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photos.class),
+            @ApiResponse(code = 401, message = "Não autorizado.", response = Photos.class),
+            @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photos.class),
+            @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Photos.class)
+    })
     public ResponseEntity<?> update(Integer id, Photos entity) {
         return null;
     }
@@ -50,6 +66,13 @@ public class PhotosController implements IController<Photos, Integer> {
     }
 
     @Override
+    @DeleteMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="${controller.photo-delete}", notes="Exlcuir dados do usuário.")
+    @ApiResponses(value={
+            @ApiResponse(code = 200, message = "Registro excluído com sucesso.", response = Photos.class),
+            @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photos.class),
+            @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Photos.class)
+    })
     public ResponseEntity<?> delete(Integer id) {
         return null;
     }
