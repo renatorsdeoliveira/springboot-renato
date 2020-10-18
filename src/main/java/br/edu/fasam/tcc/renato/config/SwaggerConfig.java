@@ -32,8 +32,8 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .useDefaultResponseMessages(false)//
                 //.securitySchemes(new ArrayList<>(Arrays.asList(apiKey())))//
-                .tags(new Tag("users", "Operations about users"))//
-                .tags(new Tag("ping", "Just a ping"))//
+//                .tags(new Tag("users", "Operations about users"))//
+//                .tags(new Tag("ping", "Just a ping"))//
                 .genericModelSubstitutes(Optional.class);
     }
 
