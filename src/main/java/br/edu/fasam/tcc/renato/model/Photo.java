@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Photos {
+public class Photo {
     private Integer albumId;
     private Integer id;
     private String title;
