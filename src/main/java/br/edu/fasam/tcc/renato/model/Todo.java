@@ -9,12 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Comments {
-
-    private Integer postId;
+public class Todo {
+    private Integer userId;
     private Integer id;
-    private String name;
-    private String email;
-    private String body;
-
+    private String title;
+    private Boolean completed;
 }
