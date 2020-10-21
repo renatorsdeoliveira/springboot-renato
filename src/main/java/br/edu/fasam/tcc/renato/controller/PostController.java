@@ -81,4 +81,5 @@ public class PostController implements IController<Post, Integer> {
     public ResponseEntity<?> options() {
         return null;
     }
+    
 }
