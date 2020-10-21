@@ -119,4 +119,5 @@ public class PostController implements IController<Post, Integer> {
     public ResponseEntity<?> options() {
         return ResponseEntity.status(200).body(String.format("Métodos permitidos: %s", Arrays.asList("GET", "POST","PUT","PATCH","DELETE", "OPTIONS").toString()));
     }
+    
 }
