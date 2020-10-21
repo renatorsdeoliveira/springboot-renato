@@ -38,11 +38,9 @@ public class CommentsController implements IController<Comment, Integer> {
     @Override
     @GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value="${controller.comment-get-id}", notes="Exibe dados do comments.")
+    @ApiOperation(value="${controller.comment-get}", notes="Exibe dados do comments.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
-            @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
-            @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Registro entregue com sucesso.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Comment.class)
     })
@@ -55,9 +53,7 @@ public class CommentsController implements IController<Comment, Integer> {
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.comment-get}", notes="Exibe dados do comments.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
-            @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
-            @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Registro entregue com sucesso.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Comment.class)
     })
@@ -83,7 +79,7 @@ public class CommentsController implements IController<Comment, Integer> {
 
     @Override
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
-    @ApiOperation(value="${controller.comment-patch}", notes="Atualizar dados do usuário.")
+    @ApiOperation(value="${controller.comment-put}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
@@ -99,9 +95,7 @@ public class CommentsController implements IController<Comment, Integer> {
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.comment-delete}", notes="Exlcuir dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
-            @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
-            @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Registro excluído com sucesso.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Comment.class)
     })
@@ -113,9 +107,7 @@ public class CommentsController implements IController<Comment, Integer> {
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.comment-options}", notes="Método responsável para apresentar as operações que o usuário pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
-            @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
-            @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Registro excluído com sucesso.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Comment.class)
     })
