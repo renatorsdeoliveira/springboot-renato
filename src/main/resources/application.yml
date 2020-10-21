@@ -30,46 +30,29 @@ spring:
 
 
 controller:
-    user-post: Método responsável por criar novos usuário.
     user-get: Método responsável por exibir dos dados do usuário.
-    user-get-id: Método responsável por exibir dos dados do usuário via ID.
+#    user-get-id: Método responsável por exibir dos dados do usuário via ID.
+    user-post: Método responsável por criar novos usuário.
     user-put: Método responsável por atualizar usuário.
-    user-patch: Método responsável por atualizar usuário.
     user-delete: Método responsável por excluir usuário.
-    user-options: Método responsável para apresentar as operações disponível na API.
 
-
-    post-post: Método responsável por criar novos post.
     post-get: Método responsável por exibir dos dados do post.
-    post-get-id: Método responsável por exibir dos dados do usuário via ID.
-    post-put: Método responsável por atualizar post específico.
-    post-patch: Método responsável por atualizar post específico.
+    post-post: Método responsável por criar novos post.
+    post-put: Método responsável por atualizar post.
     post-delete: Método responsável por excluir post.
-    post-options: Método responsável para apresentar as operações disponível na API.
 
-
-    comment-post: Método responsável por criar novos comments.
     comment-get: Método responsável por exibir dos dados do comments.
-    comment-get-id: Método responsável por exibir dos dados do usuário via ID.
-    comment-put: Método responsável por atualizar comments específico.
-    comment-patch: Método responsável por atualizar comments específico.
+    comment-post: Método responsável por criar novos comments.
+    comment-put: Método responsável por atualizar comments.
     comment-delete: Método responsável por excluir comments.
-    comment-options: Método responsável para apresentar as operações disponível na API.
 
-    photo-post: Método responsável por criar novos photos.
     photo-get: Método responsável por exibir dos dados de photos.
-    photo-get-id: Método responsável por exibir dos dados do usuário via ID.
-    photo-put: Método responsável por atualizar photo específico.
-    photo-patch: Método responsável por atualizar photo específico.
-    photo-delete: Método responsável por atualizar photos.
-    photo-options: Método responsável para apresentar as operações disponível na API.
+    photo-post: Método responsável por criar novos photos.
+    photo-put: Método responsável por atualizar photos.
+    photo-delete: Método responsável por excluir photos.
 
-
-    todo-post: Método responsável por criar novos todos
     todo-get: Método responsável por exibir dos dados de todos.
-    todo-get-id: Método responsável por exibir dos dados do usuário via ID.
-    todo-put: Método responsável por atualizar todo específico.
-    todo-patch: Método responsável por atualizar todo específico.
+    todo-post: Método responsável por criar novos todos.
+    todo-put: Método responsável por atualizar todos.
     todo-delete: Método responsável por excluir todos.
-    todo-options: Método responsável para apresentar as operações disponível na API.
 
