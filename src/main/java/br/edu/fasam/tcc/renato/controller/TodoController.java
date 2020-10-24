@@ -17,7 +17,7 @@ import java.util.Arrays;
 @RestController
 @Api(value="Operações para manipulação dos dados de todos", tags = "todos")
 @RequestMapping(value = "/api/todos", path = "/api/todos")
-public class TodosController implements IController<Todo, Integer> {
+public class TodoController implements IController<Todo, Integer> {
 
     @Override
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})

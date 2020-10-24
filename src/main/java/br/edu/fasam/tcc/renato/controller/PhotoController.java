@@ -17,7 +17,7 @@ import java.util.Arrays;
 @RestController
 @Api(value="Operações para manipulação dos dados de photos", tags = "photos, fotos, photo, foto")
 @RequestMapping(value = "/api/photos", path = "/api/photos")
-public class PhotosController implements IController<Photo, Integer> {
+public class PhotoController implements IController<Photo, Integer> {
 
     @Override
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
