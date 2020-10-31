@@ -155,7 +155,6 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-
         <!-- dependência do lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
