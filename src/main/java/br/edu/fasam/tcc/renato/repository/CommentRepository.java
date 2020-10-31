@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface CommentRepository extends IRepository<Comment, Integer> {
 
 
-    //@Query(value="SELECT c from Comment")
+    @Query(value="SELECT c from Comment c WHERE c.body LIKE '%:descricao%'")
     Page<Comment> page(@Param("descricao") String desricao, @Param("pageable") Pageable pageable);
 
 }
