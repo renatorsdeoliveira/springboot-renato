@@ -1,14 +1,14 @@
 projet:
-    name: ${project.artifactId}
-    version: ${project.version}
-    description: ${projeto.description}
+    name: '@project.artifactId@'
+    version: '@project.version@'
+    description: '@projeto.description@'
 
 info:
     build:
-        artifact: @project.artifactId@
-        name: @project.name@
-        description: @project.description@
-        version: @project.version@
+        artifact: '@project.artifactId@'
+        name: '@project.name@'
+        description: '@project.description@'
+        version: '@project.version@'
 
 ---
 
