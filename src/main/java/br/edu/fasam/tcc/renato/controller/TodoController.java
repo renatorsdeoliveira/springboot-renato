@@ -2,10 +2,12 @@ package br.edu.fasam.tcc.renato.controller;
 
 import br.edu.fasam.tcc.renato.interfaces.IController;
 import br.edu.fasam.tcc.renato.model.Todo;
+import br.edu.fasam.tcc.renato.service.TodoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,9 @@ import java.util.Arrays;
 @Api(value="Operações para manipulação dos dados de todos", tags = "todos")
 @RequestMapping(value = "/api/todos", path = "/api/todos")
 public class TodoController implements IController<Todo, Integer> {
+
+    @Autowired
+    private TodoService todoService;
 
     @Override
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
