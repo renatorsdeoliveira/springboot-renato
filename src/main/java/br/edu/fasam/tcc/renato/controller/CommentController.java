@@ -38,10 +38,9 @@ public class CommentController extends DefaultController implements IController<
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Comment.class)
     })
     public ResponseEntity<?> create(@Valid @RequestBody Comment entity) {
+
         log.trace("Criando objeto comment. {}", entity);
-
         Comment comment = commentService.create(entity);
-
         HttpHeaders responseHttpHeaders = getHttpHeaders(comment.getId());
 
         return ResponseEntity.status(HttpStatus.CREATED).headers(responseHttpHeaders).body(comment);
@@ -91,13 +90,10 @@ public class CommentController extends DefaultController implements IController<
 
         //Usar método herdado para fazer paginação
         ResponseHeaderPaginable responseHeaderPaginable = new ResponseHeaderPaginable(page,list);
-
         //Calcula o tamanho da página
         responseHeaderPaginable.invoke();
-
         //Controla o status de saída HTTP da aplicação
         HttpStatus status = responseHeaderPaginable.getStatus();
-
         //Retorna a lista pagina para o cliente com o HTTP STATUS e HEADERS corretos
         return ResponseEntity
                 .status(status)
@@ -120,10 +116,8 @@ public class CommentController extends DefaultController implements IController<
 
         //Atuliza o registro
         commentService.update(entity);
-
         //Fazer tratativas de retorno correto HTTP
         HttpHeaders responseHeaders = getHttpHeaders(null);
-
         //Retornar a consulta com o cabeçalho correto
         return ResponseEntity.noContent().headers(responseHeaders).build();
     }
