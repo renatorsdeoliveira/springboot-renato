@@ -19,14 +19,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @Table(name = "PHOTO")
 @ApiModel(value = "Photo", description = "Informações sobre a tabela photo.")
-public class Photo {
-
-    @Id
-    @Column(name = "ID")
-    @ApiModelProperty(value = "id")
-    @GeneratedValue(generator = "SEQCOMMENT", strategy = GenerationType.SEQUENCE)
-    @GenericGenerator(name="SEQCOMMENT", strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator")
-    private Integer id;
+public class Photo extends DefaultModel {
 
     @NotNull(message = "Informe o código do photo.")
     @Column(name = "ALBUMID")

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface TodoRepository extends IRepository<Todo, Integer> {
 
 
-    @Query(value="SELECT c from Todo c WHERE c.body LIKE '%:descricao%'")
+    @Query(value="SELECT c from Todo c WHERE c.title LIKE '%:descricao%'")
     Page<Todo> page(@Param("descricao") String desricao, @Param("pageable") Pageable pageable);
 
 }

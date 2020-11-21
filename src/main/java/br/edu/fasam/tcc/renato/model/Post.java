@@ -14,11 +14,9 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Post {
+public class Post extends DefaultModel {
 
     private Integer userId;
-    @Id
-    private Integer id;
     private String tittle;
     private String body;
 

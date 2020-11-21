@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends IRepository<User, Integer> {
 
 
-    @Query(value="SELECT c from User c WHERE c.body LIKE '%:descricao%'")
+    @Query(value="SELECT c from User c WHERE c.name LIKE '%:descricao%'")
     Page<User> page(@Param("descricao") String desricao, @Param("pageable") Pageable pageable);
 
 }
