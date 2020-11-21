@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface PhotoRepository extends IRepository<Photo, Integer> {
 
 
-    @Query(value="SELECT c from Photo c WHERE c.body LIKE '%:descricao%'")
+    @Query(value="SELECT c from Photo c WHERE c.title LIKE '%:descricao%'")
     Page<Photo> page(@Param("descricao") String desricao, @Param("pageable") Pageable pageable);
 
 }

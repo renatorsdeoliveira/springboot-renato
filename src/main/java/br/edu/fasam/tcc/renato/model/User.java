@@ -15,15 +15,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Table(name = "USER")
 @ApiModel(value = "User", description = "Informaçções sobre a tabela user")
-public class User {
-
-    @Id
-    @Column(name = "ID")
-    @ApiModelProperty(value = "id")
-    @GeneratedValue(generator = "SEQCOMMENT", strategy = GenerationType.SEQUENCE)
-    @GenericGenerator(name = "SEQCOMMENT", strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator")
-    private Integer id;
-
+public class User extends DefaultModel {
 
     @Column(name = "NAME")
     @ApiModelProperty(value = "name")
@@ -37,8 +29,8 @@ public class User {
     @ApiModelProperty(value = "email")
     private String email;
 
-    @OneToOne
-    @Column(name = "ADDRESS")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address_id")
     @ApiModelProperty(value = "address")
     private Address address;
 
