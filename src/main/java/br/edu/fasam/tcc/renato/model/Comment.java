@@ -17,14 +17,7 @@ import org.hibernate.annotations.GenericGenerator;
 @AllArgsConstructor
 @Table(name = "COMMENT")
 @ApiModel(value = "Comment", description = "Informações sobre a tabela comment.")
-public class Comment {
-
-    @Id
-    @Column(name = "ID")
-    @ApiModelProperty(value="id")
-    @GeneratedValue(generator = "SEQCOMMENT", strategy = GenerationType.SEQUENCE)
-    @GenericGenerator(name="SEQCOMMENT", strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator")
-    private Integer id;
+public class Comment extends DefaultModel {
 
     @NotNull(message = "Informe o código do post.")
     @Column(name = "POSTID")

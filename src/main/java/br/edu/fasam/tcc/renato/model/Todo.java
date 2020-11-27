@@ -18,15 +18,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @Table(name = "TODO")
 @ApiModel(value = "Todo", description = "Informações sobre a tabela todo")
-public class Todo {
-
-    @Id
-    @Column(name = "name")
-    @ApiModelProperty(value = "id")
-    @GeneratedValue(generator = "SEQCOMMENT", strategy = GenerationType.SEQUENCE)
-    @GenericGenerator(name = "SEQCOMMENT", strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator" )
-    private Integer id;
-
+public class Todo extends DefaultModel {
 
     @NotNull(message = "Informe o código do todo.")
     @Column(name = "USERID")
@@ -39,5 +31,5 @@ public class Todo {
 
     @Column(name = "BOOLEAN")
     @ApiModelProperty(value = "boolean")
-    private Boolean completed;
+    private boolean completed;
 }

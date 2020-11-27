@@ -7,10 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -19,7 +16,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Table(name = "ADDRESS")
 @ApiModel(value = "Address", description = "Informações sobre a tabela address.")
-public class Address {
+public class Address extends DefaultModel {
 
     @Column(name = "STREET")
     @ApiModelProperty(value = "street")
@@ -37,8 +34,8 @@ public class Address {
     @ApiModelProperty(value = "zipcode")
     private String zipcode;
 
-    @OneToOne
-    @Column(name = "GEO")
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "geo_id")
     @ApiModelProperty(value = "geo")
     private Geo geo;
 }

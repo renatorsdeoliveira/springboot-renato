@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Table(name = "GEO")
 @ApiModel(value = "Geo", description = "Informações sobre a geo.")
-public class Geo {
+public class Geo extends DefaultModel {
 
     @Column(name = "LAT")
     @ApiModelProperty(value = "lat")
