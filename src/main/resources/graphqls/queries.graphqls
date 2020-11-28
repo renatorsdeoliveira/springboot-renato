@@ -3,6 +3,7 @@ type Query {
     findBook(isbn: String): Book
     findPost(id: Int): Post
     findComment(email: String): Comment
+    findAlbum(id: Int): Album
 }
 
 type Mutation {
@@ -10,4 +11,5 @@ type Mutation {
     createAuthor(author: AuthorInput): Author
     createPost(post: PostInput): Post
     createComment(comment: CommentInput): Comment
+    createAlbum(album: AlbumInput): Album
 }

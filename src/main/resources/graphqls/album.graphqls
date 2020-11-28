@@ -1,0 +1,10 @@
+type Album {
+    id: ID!,
+    userId: Int,
+    title: String
+}
+
+input AlbumInput {
+    userId: Int,
+    title: String
+}
