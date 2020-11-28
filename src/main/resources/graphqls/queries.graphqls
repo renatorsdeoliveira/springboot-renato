@@ -4,6 +4,8 @@ type Query {
     findPost(id: Int): Post
     findComment(email: String): Comment
     findAlbum(id: Int): Album
+    findPhoto(id: Int): Photo
+
 }
 
 type Mutation {
@@ -12,4 +14,6 @@ type Mutation {
     createPost(post: PostInput): Post
     createComment(comment: CommentInput): Comment
     createAlbum(album: AlbumInput): Album
+    createPhoto(photo: PhotoInput): Photo
+
 }

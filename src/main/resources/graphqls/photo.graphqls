@@ -1,0 +1,14 @@
+type Photo {
+    id: ID!,
+    albumId: Int,
+    title: String,
+    url: String,
+    thumbnailUrl: String
+}
+
+input PhotoInput {
+    albumId: Int,
+    title: String,
+    url: String,
+    thumbnailUrl: String
+}
