@@ -24,6 +24,14 @@ spring:
     output:
         ansi:
             enabled: always
+#Logging
+logging:
+    level:
+        br:
+            edu.fasam.tcc.renato: debug
+        org:
+            springframework:
+                web: debug
 
 
 controller:
