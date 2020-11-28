@@ -1,0 +1,14 @@
+type Comment {
+    id: ID!,
+    postId: Int,
+    name: String,
+    email: String
+    body: String
+}
+
+input CommentInput {
+    postId: Int,
+    name: String,
+    email: String
+    body: String
+}
