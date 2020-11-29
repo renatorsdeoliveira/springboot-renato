@@ -1,0 +1,12 @@
+type Todo {
+    id: ID!,
+    userId: Int,
+    title: String,
+    completed: Boolean
+}
+
+input TodoInput {
+    userId: Int,
+    title: String,
+    completed: Boolean
+}
