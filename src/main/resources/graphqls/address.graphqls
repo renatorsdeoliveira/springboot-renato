@@ -1,0 +1,15 @@
+type Address {
+    street: String,
+    suite: String,
+    city: String,
+    zipcode: String,
+    email: String
+}
+
+input AddressInput {
+    street: String,
+    suite: String,
+    city: String,
+    zipcode: String,
+    email: String
+}
