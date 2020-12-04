@@ -8,8 +8,8 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "Enderecos")
-public class Endereco {
+@Table(name = "AddressQL")
+public class AddressQL {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

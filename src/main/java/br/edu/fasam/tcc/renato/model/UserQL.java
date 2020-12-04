@@ -5,7 +5,6 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Data
 @Entity
@@ -19,7 +18,7 @@ public class UserQL {
     private String username;
     private String email;
     @ManyToOne
-    private Endereco endereco;
+    private AddressQL address;
     private LocalDate createdAt = LocalDate.now();
     @Column(name = "is_active")
     private boolean active = true;

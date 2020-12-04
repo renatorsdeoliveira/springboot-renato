@@ -14,14 +14,14 @@ public class UserQLService {
     private UserQLRepository userQLRepository;
 
     @Autowired
-    private EnderecoService enderecoService;
+    private AddressQLService addressQLService;
 
-    public UserQL create(UserQL usuario, Integer id){
-        usuario.setEndereco(enderecoService.findEnderecoById(id).get());
-        return userQLRepository.save(usuario);
+    public UserQL create(UserQL userQL, Integer id){
+        userQL.setAddress(addressQLService.findAddressQLById(id).get());
+        return userQLRepository.save(userQL);
     }
 
-    public Optional<UserQL> findUsuario(String email) {
+    public Optional<UserQL> findUser(String email) {
         return userQLRepository.findByEmail(email);
     }
 

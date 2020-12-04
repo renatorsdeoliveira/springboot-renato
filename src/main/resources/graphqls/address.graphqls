@@ -1,4 +1,4 @@
-type Endereco {
+type Address {
     street: String,
     suite: String,
     city: String,
@@ -6,7 +6,7 @@ type Endereco {
     email: String
 }
 
-input EnderecoInput {
+input AddressInput {
     street: String,
     suite: String,
     city: String,

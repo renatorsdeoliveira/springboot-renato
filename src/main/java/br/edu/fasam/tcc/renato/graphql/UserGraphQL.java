@@ -16,7 +16,7 @@ public class UserGraphQL implements GraphQLMutationResolver, GraphQLQueryResolve
     private UserQLService userQLService;
 
     public Optional<UserQL> findUser(String email) {
-        return userQLService.findUsuario(email);
+        return userQLService.findUser(email);
     }
 
     public UserQL createUser(UserQL user, Integer id) {
