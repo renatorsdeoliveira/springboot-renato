@@ -1,27 +1,27 @@
 package br.edu.fasam.tcc.renato.service;
 
-import br.edu.fasam.tcc.renato.model.Author;
-import br.edu.fasam.tcc.renato.repository.AuthorRepository;
+import br.edu.fasam.tcc.renato.model.Endereco;
+import br.edu.fasam.tcc.renato.repository.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class AuthorService {
+public class EnderecoService {
 
     @Autowired
-    private AuthorRepository authorRepository;
+    private EnderecoRepository enderecoRepository;
 
-    public Author create(Author author) {
-        return authorRepository.save(author);
+    public Endereco create(Endereco endereco) {
+        return enderecoRepository.save(endereco);
     }
 
-    public void deleteDoRenato(Author author){
-        authorRepository.delete(author);
+    public void deleteDoRenato(Endereco endereco){
+        enderecoRepository.delete(endereco);
     }
 
-    public Optional<Author> findAuthorByEmail(String email) {
-        return authorRepository.findByEmail(email);
+    public Optional<Endereco> findEnderecoById(Integer id) {
+        return enderecoRepository.findById(id);
     }
 }

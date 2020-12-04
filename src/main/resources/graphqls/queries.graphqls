@@ -6,6 +6,9 @@ type Query {
     findAlbum(id: Int): Album
     findPhoto(id: Int): Photo
     findTodo(id: Int): Todo
+    findEndereco(email: String): Endereco
+    findUser(isbn: String): User
+
 }
 
 type Mutation {
@@ -16,4 +19,6 @@ type Mutation {
     createAlbum(album: AlbumInput): Album
     createPhoto(photo: PhotoInput): Photo
     createTodo(todo: TodoInput): Todo
+    createUser(user: UserInput!, email: String!): User
+    createEndereco(endereco: EnderecoInput): Endereco
 }

@@ -8,15 +8,16 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "authors")
-public class Author {
+@Table(name = "Enderecos")
+public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String fullname;
+    private String street;
+    private String suite;
+    private String city;
+    private String zipcode;
     private String email;
-    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
-    private List<Book> books = new ArrayList();
 
 }

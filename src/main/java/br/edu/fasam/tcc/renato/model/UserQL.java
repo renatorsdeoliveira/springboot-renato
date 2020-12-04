@@ -9,17 +9,17 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "books")
+@Table(name = "UserQL")
 @Where(clause = "is_active = true")
-public class Book {
+public class UserQL {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String isbn = UUID.randomUUID().toString();
-    private String title;
-    private String subject;
+    private String name;
+    private String username;
+    private String email;
     @ManyToOne
-    private Author author;
+    private Endereco endereco;
     private LocalDate createdAt = LocalDate.now();
     @Column(name = "is_active")
     private boolean active = true;

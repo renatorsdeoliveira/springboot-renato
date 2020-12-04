@@ -1,7 +1,7 @@
 package br.edu.fasam.tcc.renato.graphql;
 
-import br.edu.fasam.tcc.renato.model.Author;
-import br.edu.fasam.tcc.renato.service.AuthorService;
+import br.edu.fasam.tcc.renato.model.Endereco;
+import br.edu.fasam.tcc.renato.service. EnderecoService;
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +11,18 @@ import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Component
-public class AuthorGraphQL implements GraphQLMutationResolver, GraphQLQueryResolver {
+public class EnderecoGraphQL implements GraphQLMutationResolver, GraphQLQueryResolver {
 
     @Autowired
-    private AuthorService authorService;
+    private EnderecoService enderecoService;
 
-    public Optional<Author> findAuthor(String email){
-        return authorService.findAuthorByEmail(email);
+    public Optional<Endereco> findEndereco(Integer id){
+        return enderecoService.findEnderecoById(id);
     }
 
     @Transactional(rollbackOn = Exception.class)
-    public Author createAuthor(Author author) {
-        return authorService.create(author);
+    public Endereco createEndereco(Endereco endereco) {
+        return enderecoService.create(endereco);
     }
 
 }
