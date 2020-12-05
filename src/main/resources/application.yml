@@ -70,6 +70,7 @@ controller:
     comment-delete: Método responsável por excluir comments.
     comment-options: Método responsável para apresentar as operações disponível na API.
 
+
     photo-post: Método responsável por criar novos photos.
     photo-get: Método responsável por exibir dos dados de photos.
     photo-get-id: Método responsável por exibir dos dados do usuário via ID.
