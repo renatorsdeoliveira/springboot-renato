@@ -21,7 +21,7 @@ import java.util.Arrays;
 @Log4j2
 @RestController
 @Api(value="Operações para manipulação dos dados do album", tags = "album, albums")
-@RequestMapping(value = "/api/albuns", path = "/api/albuns")
+@RequestMapping(value = "/api/albums", path = "/api/albums")
 public class AlbumController extends DefaultController implements IController<Album, Integer> {
 
     @Autowired
