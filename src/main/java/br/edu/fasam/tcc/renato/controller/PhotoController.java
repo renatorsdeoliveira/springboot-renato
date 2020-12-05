@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 @Log4j2
 @RestController
-@Api(value="Operações para manipulação dos dados de photos", tags = "photos, fotos, photo, foto")
+@Api(value="Operações para manipulação dos dados de photos", tags = "photo, photos")
 @RequestMapping(value = "/api/photos", path = "/api/photos")
 public class PhotoController extends DefaultController implements IController<Photo, Integer> {
 
