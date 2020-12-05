@@ -20,7 +20,7 @@ import java.util.Arrays;
 
 @Log4j2
 @RestController
-@Api(value="Operações para manipulação dos dados do album", tags = "album, albuns")
+@Api(value="Operações para manipulação dos dados do album", tags = "album, albums")
 @RequestMapping(value = "/api/albuns", path = "/api/albuns")
 public class AlbumController extends DefaultController implements IController<Album, Integer> {
 
@@ -47,6 +47,8 @@ public class AlbumController extends DefaultController implements IController<Al
 
     }
 
+
+
     @Override
     @GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseStatus(HttpStatus.OK)
@@ -70,6 +72,8 @@ public class AlbumController extends DefaultController implements IController<Al
 
         return ResponseEntity.ok().headers(responseHttpHeaders).body(album);
     }
+
+
 
     @Override
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -100,6 +104,8 @@ public class AlbumController extends DefaultController implements IController<Al
                 .header(CONTENT_RANGE_HEADER, responseHeaderPaginable.responsePageRange()).body(list);
     }
 
+
+
     @Override
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.album-put}", notes="Atualizar dados do usuário.")
@@ -122,6 +128,8 @@ public class AlbumController extends DefaultController implements IController<Al
         return ResponseEntity.noContent().headers(responseHeaders).build();
     }
 
+
+
     @Override
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.album-patch}", notes="Atualizar dados do usuário.")
@@ -133,8 +141,18 @@ public class AlbumController extends DefaultController implements IController<Al
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Album.class)
     })
     public ResponseEntity<?> patch(@PathVariable Integer id, @Valid @RequestBody Album entity) {
-        return null;
+
+        log.trace("Alterando registro {}", entity);
+
+        //Atuliza o registro
+        albumService.patch(entity);
+        //Fazer tratativas de retorno correto HTTP
+        HttpHeaders responseHeaders = getHttpHeaders(null);
+        //Retornar a consulta com o cabeçalho correto
+        return ResponseEntity.noContent().headers(responseHeaders).build();
     }
+
+
 
     @Override
     @DeleteMapping(path = "/{id}")
@@ -152,6 +170,8 @@ public class AlbumController extends DefaultController implements IController<Al
         albumService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+
 
     @Override
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})

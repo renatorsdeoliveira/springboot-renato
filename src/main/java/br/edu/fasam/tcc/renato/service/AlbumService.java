@@ -50,6 +50,12 @@ public class AlbumService implements IService<Album, Integer> {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
+    public void patch(Album entity) {
+        albumRepository.save(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Throwable.class)
     public void deleteById(Integer id) {
         albumRepository.deleteById(id);
     }

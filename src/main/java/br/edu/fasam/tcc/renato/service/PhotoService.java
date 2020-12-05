@@ -49,6 +49,12 @@ public class PhotoService implements IService<Photo, Integer> {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
+    public void patch(Photo entity) {
+        photoRepository.save(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Throwable.class)
     public void deleteById(Integer id) {
         photoRepository.deleteById(id);
     }
