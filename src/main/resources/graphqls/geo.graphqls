@@ -1,0 +1,10 @@
+type Geo {
+    lat: String,
+    lng: String
+}
+
+input GeoInput {
+    lat: String,
+    lng: String
+
+}
