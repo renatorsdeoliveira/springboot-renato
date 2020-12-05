@@ -5,10 +5,16 @@ type Photo {
     url: String,
     thumbnailUrl: String
 }
-
 input PhotoInput {
     albumId: Int,
     title: String,
     url: String,
     thumbnailUrl: String
+}
+
+extend type Query {
+    findPhoto(id: Int): Photo
+}
+extend type Mutation {
+    createPhoto(photo: PhotoInput): Photo
 }

@@ -4,8 +4,14 @@ type Book {
     subject: String!
     author: Author!
 }
-
 input BookInput {
     title: String!
     subject: String!
+}
+
+extend type Query {
+    findBook(isbn: String): Book
+}
+extend type Mutation {
+    createBook(book: BookInput!, email: String!): Book
 }

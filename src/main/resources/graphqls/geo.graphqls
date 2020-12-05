@@ -1,10 +1,16 @@
 type Geo {
+    id:ID!
+    lat: String,
+    lng: String
+}
+input GeoInput {
     lat: String,
     lng: String
 }
 
-input GeoInput {
-    lat: String,
-    lng: String
-
+extend type Query {
+    findGeo(id: Int): Geo
+}
+extend type Mutation {
+    createGeo(geo: GeoInput): Geo
 }

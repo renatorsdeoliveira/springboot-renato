@@ -4,9 +4,15 @@ type Post {
     title: String,
     body: String
 }
-
 input PostInput {
     userId: Int,
     title: String,
     body: String
+}
+
+extend  type  Query {
+    findPost(id: Int): Post
+}
+extend type Mutation {
+    createPost(post: PostInput): Post
 }

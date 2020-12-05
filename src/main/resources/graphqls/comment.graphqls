@@ -5,10 +5,16 @@ type Comment {
     email: String
     body: String
 }
-
 input CommentInput {
     postId: Int,
     name: String,
     email: String
     body: String
+}
+
+extend type Query {
+    findComment(email: String): Comment
+}
+extend type Mutation {
+    createComment(comment: CommentInput): Comment
 }

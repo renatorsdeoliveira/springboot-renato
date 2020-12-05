@@ -5,10 +5,16 @@ type Address {
     zipcode: String,
     geo: Geo
 }
-
 input AddressInput {
     street: String,
     suite: String,
     city: String,
     zipcode: String,
+}
+
+extend type Query {
+    findAddress(email: String): Address
+}
+extend type Mutation {
+    createAddress(address : AddressInput, id: ID!): Address
 }

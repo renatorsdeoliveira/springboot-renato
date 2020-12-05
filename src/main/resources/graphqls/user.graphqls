@@ -5,9 +5,15 @@ type User {
     email: String!
     address: Address!
 }
-
 input UserInput {
     name: String!
     username: String!
     email: String!
+}
+
+extend type Query {
+    findUser(isbn: String): User
+}
+extend type Mutation {
+    createUser(user: UserInput!, id: ID!): User
 }

@@ -3,8 +3,14 @@ type Author {
     email: String
     books: [Book]
 }
-
 input AuthorInput {
     fullname: String,
     email: String
+}
+
+extend type Query {
+    findAuthor(email: String): Author
+}
+extend type Mutation {
+    createAuthor(author: AuthorInput): Author
 }
