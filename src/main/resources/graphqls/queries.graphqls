@@ -8,7 +8,7 @@ type Query {
     findTodo(id: Int): Todo
     findAddress(email: String): Address
     findUser(isbn: String): User
-
+    findGeo(id: Int): Geo
 }
 
 type Mutation {
@@ -19,6 +19,8 @@ type Mutation {
     createAlbum(album: AlbumInput): Album
     createPhoto(photo: PhotoInput): Photo
     createTodo(todo: TodoInput): Todo
-    createUser(user: UserInput!, email: String!): User
-    createAddress(address : AddressInput): Address
+    createUser(user: UserInput!, id: ID!): User
+    createAddress(address : AddressInput, id: ID!): Address
+    createGeo(geo: GeoInput): Geo
+
 }
