@@ -20,7 +20,7 @@ import java.util.Arrays;
 
 @Log4j2
 @RestController
-@Api(value="Operações para manipulação dos dados do comments", tags = "comments, comentários, comment,  comentário")
+@Api(value="Operações para manipulação dos dados do comments", tags = "comments, comentários")
 @RequestMapping(value = "/api/comments", path = "/api/comments")
 public class CommentController extends DefaultController implements IController<Comment, Integer> {
 
