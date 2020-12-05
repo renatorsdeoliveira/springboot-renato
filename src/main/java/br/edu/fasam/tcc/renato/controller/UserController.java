@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 @Log4j2
 @RestController
-@Api(value="Operações para manipulação dos dados do usuário", tags = "usuario, user, usuário")
+@Api(value="Operações para manipulação dos dados do usuário", tags = "user, usuario ")
 @RequestMapping(value = "/api/users", path = "/api/users")
 public class UserController extends DefaultController implements IController<User, Integer> {
 

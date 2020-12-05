@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 @Log4j2
 @RestController
-@Api(value="Operações para manipulação dos dados de todos", tags = "todos")
+@Api(value="Operações para manipulação dos dados de todos", tags = "todo, todos")
 @RequestMapping(value = "/api/todos", path = "/api/todos")
 public class TodoController extends  DefaultController implements IController<Todo, Integer> {
 

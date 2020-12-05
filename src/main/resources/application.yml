@@ -35,6 +35,15 @@ logging:
 
 
 controller:
+
+    album-post: Método responsável por criar novos todos
+    album-get: Método responsável por exibir dos dados de todos.
+    album-get-id: Método responsável por exibir dos dados do usuário via ID.
+    album-put: Método responsável por atualizar todo específico.
+    album-patch: Método responsável por atualizar todo específico.
+    album-delete: Método responsável por excluir todos.
+    album-options: Método responsável para apresentar as operações disponível na API.
+
     user-post: Método responsável por criar novos usuário.
     user-get: Método responsável por exibir dos dados do usuário.
     user-get-id: Método responsável por exibir dos dados do usuário via ID.
