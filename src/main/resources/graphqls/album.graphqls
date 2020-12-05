@@ -3,8 +3,14 @@ type Album {
     userId: Int,
     title: String
 }
-
 input AlbumInput {
     userId: Int,
     title: String
+}
+
+extend type Query {
+    findAlbum(id: Int): Album
+}
+extend type Mutation {
+    createAlbum(album: AlbumInput): Album
 }

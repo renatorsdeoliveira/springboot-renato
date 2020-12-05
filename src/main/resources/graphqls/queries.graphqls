@@ -1,26 +1,7 @@
 type Query {
-    findAuthor(email: String): Author
-    findBook(isbn: String): Book
-    findPost(id: Int): Post
-    findComment(email: String): Comment
-    findAlbum(id: Int): Album
-    findPhoto(id: Int): Photo
-    findTodo(id: Int): Todo
-    findAddress(email: String): Address
-    findUser(isbn: String): User
-    findGeo(id: Int): Geo
+
 }
 
 type Mutation {
-    createBook(book: BookInput!, email: String!): Book
-    createAuthor(author: AuthorInput): Author
-    createPost(post: PostInput): Post
-    createComment(comment: CommentInput): Comment
-    createAlbum(album: AlbumInput): Album
-    createPhoto(photo: PhotoInput): Photo
-    createTodo(todo: TodoInput): Todo
-    createUser(user: UserInput!, id: ID!): User
-    createAddress(address : AddressInput, id: ID!): Address
-    createGeo(geo: GeoInput): Geo
 
 }
