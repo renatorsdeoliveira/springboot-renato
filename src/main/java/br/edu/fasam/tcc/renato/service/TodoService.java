@@ -48,6 +48,11 @@ public class TodoService implements IService<Todo, Integer> {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
+    public void patch(Todo entity) { todoRepository.save(entity); }
+
+
+    @Override
+    @Transactional(rollbackFor = Throwable.class)
     public void deleteById(Integer id) {
         todoRepository.deleteById(id);
     }

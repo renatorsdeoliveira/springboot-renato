@@ -22,6 +22,8 @@ public interface IService<T,N> {
 
     void update(T entity);
 
+    void patch(T entity);
+
     void deleteById(N id);
 
     void delete(T entity);

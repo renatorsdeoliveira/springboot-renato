@@ -46,6 +46,8 @@ public class PhotoController extends DefaultController implements IController<Ph
 
     }
 
+
+
     @Override
     @GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseStatus(HttpStatus.OK)
@@ -69,6 +71,8 @@ public class PhotoController extends DefaultController implements IController<Ph
         return ResponseEntity.ok().headers(responseHttpHeaders).body(photo);
 
     }
+
+
 
     @Override
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -100,6 +104,8 @@ public class PhotoController extends DefaultController implements IController<Ph
                 .header(CONTENT_RANGE_HEADER, responseHeaderPaginable.responsePageRange()).body(list);
     }
 
+
+
     @Override
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.photo-put}", notes="Atualizar dados do photo.")
@@ -120,6 +126,8 @@ public class PhotoController extends DefaultController implements IController<Ph
         return ResponseEntity.noContent().headers(responseHeaders).build();
     }
 
+
+
     @Override
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.photo-patch}", notes="Atualizar dados do photo.")
@@ -131,8 +139,16 @@ public class PhotoController extends DefaultController implements IController<Ph
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Photo.class)
     })
     public ResponseEntity<?> patch(@PathVariable Integer id, @Valid @RequestBody Photo entity) {
-        return null;
+        log.trace("Alterando registro {}", entity);
+        //Atuliza o registro
+        photoService.patch(entity);
+        //Fazer tratativas de retorno correto HTTP
+        HttpHeaders responseHeaders = getHttpHeaders(null);
+        //Retornar a consulta com o cabeçalho correto
+        return ResponseEntity.noContent().headers(responseHeaders).build();
     }
+
+
 
     @Override
     @DeleteMapping(path = "/{id}")
@@ -149,6 +165,8 @@ public class PhotoController extends DefaultController implements IController<Ph
         photoService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+
 
     @Override
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})

@@ -47,6 +47,12 @@ public class PostService implements IService<Post, Integer> {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
+    public void patch(Post entity) {
+        postRepository.save(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Throwable.class)
     public void deleteById(Integer id) {
         postRepository.deleteById(id);
     }

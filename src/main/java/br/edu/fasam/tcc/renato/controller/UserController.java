@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 @Log4j2
 @RestController
-@Api(value="Operações para manipulação dos dados do usuário", tags = "user, usuario ")
+@Api(value="Operações para manipulação dos dados do usuário", tags = "user, users ")
 @RequestMapping(value = "/api/users", path = "/api/users")
 public class UserController extends DefaultController implements IController<User, Integer> {
 
@@ -45,6 +45,8 @@ public class UserController extends DefaultController implements IController<Use
 
     }
 
+
+
     @Override
     @GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseStatus(HttpStatus.OK)
@@ -66,6 +68,8 @@ public class UserController extends DefaultController implements IController<Use
 
         return ResponseEntity.ok().headers(responseHttpHeaders).body(user);
     }
+
+
 
     @Override
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -96,6 +100,8 @@ public class UserController extends DefaultController implements IController<Use
                 .header(CONTENT_RANGE_HEADER, responseHeaderPaginable.responsePageRange()).body(list);
     }
 
+
+
     @Override
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.user-put}", notes="Atualizar dados do usuário.")
@@ -117,6 +123,8 @@ public class UserController extends DefaultController implements IController<Use
         return ResponseEntity.noContent().headers(responseHeaders).build();
     }
 
+
+
     @Override
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.user-patch}", notes="Atualizar dados do usuário.")
@@ -128,8 +136,17 @@ public class UserController extends DefaultController implements IController<Use
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = User.class)
     })
     public ResponseEntity<?> patch(@PathVariable Integer id, @Valid @RequestBody User entity) {
-        return null;
+        log.trace("Alterando registro {}", entity);
+
+        //Atuliza o registro
+        userService.patch(entity);
+        //Fazer tratativas de retorno correto HTTP
+        HttpHeaders responseHeaders = getHttpHeaders(null);
+        //Retornar a consulta com o cabeçalho correto
+        return ResponseEntity.noContent().headers(responseHeaders).build();
     }
+
+
 
     @Override
     @DeleteMapping(path = "/{id}")
@@ -146,6 +163,8 @@ public class UserController extends DefaultController implements IController<Use
         userService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+
 
     @Override
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})

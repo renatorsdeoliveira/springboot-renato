@@ -47,6 +47,12 @@ public class UserService implements IService<User, Integer> {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
+    public void patch(User entity) {
+        userRepository.save(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Throwable.class)
     public void deleteById(Integer id) {
         userRepository.deleteById(id);
     }
