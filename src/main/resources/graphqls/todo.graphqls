@@ -4,9 +4,15 @@ type Todo {
     title: String,
     completed: Boolean
 }
-
 input TodoInput {
     userId: Int,
     title: String,
     completed: Boolean
+}
+
+extend type Query {
+    findTodo(id: Int): Todo
+}
+extend type Mutation {
+    createTodo(todo: TodoInput): Todo
 }
