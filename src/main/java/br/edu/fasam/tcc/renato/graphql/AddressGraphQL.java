@@ -21,8 +21,8 @@ public class AddressGraphQL implements GraphQLMutationResolver, GraphQLQueryReso
     }
 
     @Transactional(rollbackOn = Exception.class)
-    public AddressQL createAddress(AddressQL address) {
-        return addressQLService.create(address);
+    public AddressQL createAddress(AddressQL address, Integer id ) {
+        return addressQLService.create(address , id);
     }
 
 }

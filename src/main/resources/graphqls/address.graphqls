@@ -3,7 +3,7 @@ type Address {
     suite: String,
     city: String,
     zipcode: String,
-    email: String
+    geo: Geo
 }
 
 input AddressInput {
@@ -11,5 +11,4 @@ input AddressInput {
     suite: String,
     city: String,
     zipcode: String,
-    email: String
 }

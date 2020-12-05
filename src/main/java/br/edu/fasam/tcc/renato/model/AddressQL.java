@@ -18,6 +18,6 @@ public class AddressQL {
     private String suite;
     private String city;
     private String zipcode;
-    private String email;
-
+    @ManyToOne
+    private GeoQL geo;
 }
