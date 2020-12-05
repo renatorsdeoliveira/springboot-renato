@@ -50,6 +50,12 @@ public class CommentService implements IService<Comment, Integer> {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
+    public void patch(Comment entity) {
+        commentRepository.save(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Throwable.class)
     public void deleteById(Integer id) {
         commentRepository.deleteById(id);
     }

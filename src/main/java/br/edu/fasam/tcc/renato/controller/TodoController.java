@@ -44,6 +44,8 @@ public class TodoController extends  DefaultController implements IController<To
         return ResponseEntity.status(HttpStatus.CREATED).headers(responseHttpHeaders).body(todo);
     }
 
+
+
     @Override
     @GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseStatus(HttpStatus.OK)
@@ -66,6 +68,8 @@ public class TodoController extends  DefaultController implements IController<To
 
         return ResponseEntity.ok().headers(responseHttpHeaders).body(todo);
     }
+
+
 
     @Override
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -98,6 +102,7 @@ public class TodoController extends  DefaultController implements IController<To
     }
 
 
+
     @Override
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.todo-put}", notes="Atualizar dados do todo.")
@@ -120,6 +125,7 @@ public class TodoController extends  DefaultController implements IController<To
     }
 
 
+
     @Override
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.todo-patch}", notes="Atualizar dados do todo.")
@@ -131,8 +137,17 @@ public class TodoController extends  DefaultController implements IController<To
             @ApiResponse(code = 500, message = "Erro na requisão, verifique configurações do servidor.", response = Todo.class)
     })
     public ResponseEntity<?> patch(@PathVariable Integer id, @Valid @RequestBody Todo entity) {
-        return null;
+        log.trace("Alterando registro {}", entity);
+
+        //Atuliza o registro
+        todoService.patch(entity);
+        //Fazer tratativas de retorno correto HTTP
+        HttpHeaders responseHeaders = getHttpHeaders(null);
+        //Retornar a consulta com o cabeçalho correto
+        return ResponseEntity.noContent().headers(responseHeaders).build();
     }
+
+
 
     @Override
     @DeleteMapping(path = "/{id}")
@@ -149,6 +164,8 @@ public class TodoController extends  DefaultController implements IController<To
         todoService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+
 
     @Override
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
