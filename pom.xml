@@ -8,7 +8,7 @@
     <artifactId>springboot-renato</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>Projeto exemplo para TCC do Renato</name>
+    <name>Projeto comparativo entre Rest e GraphQL</name>
     <description>Projeto springboot-renato 1.0.0-SNAPSHOT</description>
 
     <organization>
