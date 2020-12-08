@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class Post extends DefaultModel {
 
     private Integer userId;
-    private String tittle;
+    private String title;
     private String body;
 
 }
