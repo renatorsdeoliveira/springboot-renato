@@ -16,13 +16,8 @@ public class GeoGraphQL implements GraphQLMutationResolver, GraphQLQueryResolver
     @Autowired
     private GeoQLService geoQLService;
 
-    public Optional<GeoQL> findGeo(Integer id){
-        return geoQLService.findGeoQLById(id);
-    }
+    public Optional<GeoQL> findGeo(Integer id){ return geoQLService.findGeoQLById(id); }
 
-    @Transactional(rollbackOn = Exception.class)
-    public GeoQL createGeo(GeoQL geoQL) {
-        return geoQLService.create(geoQL);
-    }
+    @Transactional(rollbackOn = Exception.class)  public GeoQL createGeo(GeoQL geoQL) { return geoQLService.create(geoQL); }
 
 }
