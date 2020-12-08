@@ -62,4 +62,6 @@ public class AlbumService implements IService<Album, Integer> {
     public void delete(Album entity) {
         albumRepository.delete(entity);
     }
+
+
 }
