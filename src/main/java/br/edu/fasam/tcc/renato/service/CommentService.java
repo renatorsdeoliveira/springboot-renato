@@ -12,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Classe de negócio responsável para tratar informações referente a comentários (Comment);
- */
 @Service
 public class CommentService implements IService<Comment, Integer> {
 
