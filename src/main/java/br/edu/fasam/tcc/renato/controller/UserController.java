@@ -30,7 +30,8 @@ public class UserController extends DefaultController implements IController<Use
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.user-post}", notes="Criar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -52,7 +53,8 @@ public class UserController extends DefaultController implements IController<Use
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.user-get-id}", notes="Exibe dados do user.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -76,7 +78,8 @@ public class UserController extends DefaultController implements IController<Use
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.user-get}", notes="Exibe dados do user.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -106,7 +109,8 @@ public class UserController extends DefaultController implements IController<Use
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.user-put}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -129,7 +133,8 @@ public class UserController extends DefaultController implements IController<Use
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.user-patch}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -152,7 +157,8 @@ public class UserController extends DefaultController implements IController<Use
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.user-delete}", notes="Exlcuir dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -170,7 +176,8 @@ public class UserController extends DefaultController implements IController<Use
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.user-options}", notes="Método responsável para apresentar as operações que o usuário pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = User.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),

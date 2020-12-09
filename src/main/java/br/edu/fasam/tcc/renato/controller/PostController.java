@@ -30,7 +30,8 @@ public class PostController extends DefaultController implements IController<Pos
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.post-post}", notes="Criar dados do post.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -53,7 +54,8 @@ public class PostController extends DefaultController implements IController<Pos
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.post-get-id}", notes="Exibe dados do post.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -78,7 +80,8 @@ public class PostController extends DefaultController implements IController<Pos
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.post-get}", notes="Exibe dados do post.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -108,7 +111,8 @@ public class PostController extends DefaultController implements IController<Pos
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.post-put}", notes="Atualizar dados do post.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -131,7 +135,8 @@ public class PostController extends DefaultController implements IController<Pos
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.post-patch}", notes="Atualizar dados do post.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -154,7 +159,8 @@ public class PostController extends DefaultController implements IController<Pos
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.post-delete}", notes="Exlcuir dados do post.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -172,7 +178,8 @@ public class PostController extends DefaultController implements IController<Pos
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.post-options}", notes="Método responsável para apresentar as operações que o post pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),

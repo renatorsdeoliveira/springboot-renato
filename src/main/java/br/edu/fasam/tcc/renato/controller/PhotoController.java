@@ -30,7 +30,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.photo-post}", notes="Criar dados do photo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),
@@ -53,7 +54,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.photo-get-id}", notes="Exibe dados do photo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),
@@ -79,7 +81,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.photo-get}", notes="Exibe dados do photo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),
@@ -110,7 +113,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.photo-put}", notes="Atualizar dados do photo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),
@@ -132,7 +136,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.photo-patch}", notes="Atualizar dados do photo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),
@@ -154,7 +159,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.photo-delete}", notes="Exlcuir dados do photo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),
@@ -172,7 +178,8 @@ public class PhotoController extends DefaultController implements IController<Ph
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.photo-options}", notes="Método responsável para apresentar as operações que o photo pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Photo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Photo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Photo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Photo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Photo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Photo.class),

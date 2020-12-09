@@ -31,7 +31,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.album-post}", notes="Criar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -54,7 +55,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.album-get-id}", notes="Exibe dados do albuns.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -80,7 +82,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.album-get}", notes="Exibe dados do albuns.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -110,7 +113,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.album-put}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -134,7 +138,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.album-patch}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -158,7 +163,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.album-delete}", notes="Exlcuir dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -177,7 +183,8 @@ public class AlbumController extends DefaultController implements IController<Al
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.album-options}", notes="Método responsável para apresentar as operações que o usuário pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Album.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
