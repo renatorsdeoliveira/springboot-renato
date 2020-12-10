@@ -32,6 +32,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -54,6 +55,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -80,6 +82,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -112,6 +115,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -136,6 +140,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -160,6 +165,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -179,6 +185,7 @@ public class TodoController extends  DefaultController implements IController<To
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),

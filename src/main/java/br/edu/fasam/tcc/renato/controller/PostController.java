@@ -32,6 +32,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -56,6 +57,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -82,6 +84,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -113,6 +116,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -137,6 +141,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -161,6 +166,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),
@@ -180,6 +186,7 @@ public class PostController extends DefaultController implements IController<Pos
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Post.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Post.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Post.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Post.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Post.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Post.class),

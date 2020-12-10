@@ -32,6 +32,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -55,6 +56,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -80,6 +82,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -111,6 +114,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -135,6 +139,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -159,6 +164,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),
@@ -178,6 +184,7 @@ public class UserController extends DefaultController implements IController<Use
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = User.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = User.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = User.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = User.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = User.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = User.class),

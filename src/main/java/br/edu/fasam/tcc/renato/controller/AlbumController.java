@@ -33,6 +33,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -57,6 +58,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -84,6 +86,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -115,6 +118,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -140,6 +144,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -165,6 +170,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),
@@ -185,6 +191,7 @@ public class AlbumController extends DefaultController implements IController<Al
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Album.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Album.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Album.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Album.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Album.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Album.class),

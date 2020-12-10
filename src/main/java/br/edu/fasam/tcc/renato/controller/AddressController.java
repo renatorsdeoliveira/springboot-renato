@@ -32,6 +32,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
@@ -56,6 +57,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
@@ -83,6 +85,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
@@ -115,6 +118,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
@@ -138,6 +142,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
@@ -161,6 +166,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
@@ -180,6 +186,7 @@ public class AddressController extends DefaultController implements IController<
     @ApiResponses(value={
             @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Address.class),
             @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Address.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Address.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Address.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Address.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Address.class),
