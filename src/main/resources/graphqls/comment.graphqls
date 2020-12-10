@@ -13,7 +13,7 @@ input CommentInput {
 }
 
 extend type Query {
-    findComment(email: String): Comment
+    findComment(id: ID): Comment
 }
 extend type Mutation {
     createComment(comment: CommentInput): Comment

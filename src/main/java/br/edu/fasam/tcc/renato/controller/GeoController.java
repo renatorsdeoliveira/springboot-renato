@@ -30,7 +30,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.geo-post}", notes="Criar dados do geo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
@@ -53,7 +55,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.geo-get-id}", notes="Exibe dados do geo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
@@ -79,7 +83,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.geo-get}", notes="Exibe dados do geo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
@@ -110,7 +116,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.geo-put}", notes="Atualizar dados do geo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
@@ -132,7 +140,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.geo-patch}", notes="Atualizar dados do geo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
@@ -154,7 +164,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.geo-delete}", notes="Exlcuir dados do geo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
@@ -172,7 +184,9 @@ public class GeoController extends DefaultController implements IController<Geo,
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.geo-options}", notes="Método responsável para apresentar as operações que o geo pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Geo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Geo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Geo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Geo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Geo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Geo.class),
