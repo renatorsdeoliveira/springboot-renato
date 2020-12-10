@@ -30,7 +30,9 @@ public class TodoController extends  DefaultController implements IController<To
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.todo-post}", notes="Criar dados do todo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -51,7 +53,9 @@ public class TodoController extends  DefaultController implements IController<To
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.todo-get-id}", notes="Exibe dados do todo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -76,7 +80,9 @@ public class TodoController extends  DefaultController implements IController<To
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.todo-get}", notes="Exibe dados do todo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -107,7 +113,9 @@ public class TodoController extends  DefaultController implements IController<To
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.todo-put}", notes="Atualizar dados do todo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -130,7 +138,9 @@ public class TodoController extends  DefaultController implements IController<To
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.todo-patch}", notes="Atualizar dados do todo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -153,7 +163,9 @@ public class TodoController extends  DefaultController implements IController<To
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.todo-delete}", notes="Exlcuir dados do todo.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),
@@ -171,7 +183,9 @@ public class TodoController extends  DefaultController implements IController<To
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.todo-options}", notes="Método responsável para apresentar as operações que o usuário pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Todo.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Todo.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Todo.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Todo.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Todo.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Todo.class),

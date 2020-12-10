@@ -31,7 +31,9 @@ public class CommentController extends DefaultController implements IController<
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.comment-post}", notes="Criar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
@@ -54,7 +56,9 @@ public class CommentController extends DefaultController implements IController<
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.comment-get-id}", notes="Exibe dados do comments.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
@@ -80,7 +84,9 @@ public class CommentController extends DefaultController implements IController<
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value="${controller.comment-get}", notes="Exibe dados do comments.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
@@ -110,7 +116,9 @@ public class CommentController extends DefaultController implements IController<
     @PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.comment-put}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
@@ -134,7 +142,9 @@ public class CommentController extends DefaultController implements IController<
     @PatchMapping(path = "/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE })
     @ApiOperation(value="${controller.comment-patch}", notes="Atualizar dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
@@ -158,7 +168,9 @@ public class CommentController extends DefaultController implements IController<
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value="${controller.comment-delete}", notes="Exlcuir dados do usuário.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
@@ -177,7 +189,9 @@ public class CommentController extends DefaultController implements IController<
     @RequestMapping(method={RequestMethod.OPTIONS}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="${controller.comment-options}", notes="Método responsável para apresentar as operações que o usuário pode fazer da API utilizada.")
     @ApiResponses(value={
-            @ApiResponse(code = 200, message = "Registro atualizado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 200, message = "Requisição feita com sucesso.", response = Comment.class),
+            @ApiResponse(code = 201, message = "Registro criado com sucesso.", response = Comment.class),
+            @ApiResponse(code = 204, message = "O servidor processou a solicitação com sucesso e não está retornando nenhum conteúdo.", response = Comment.class),
             @ApiResponse(code = 301, message = "Redirecionamento permanente.", response = Comment.class),
             @ApiResponse(code = 401, message = "Não autorizado.", response = Comment.class),
             @ApiResponse(code = 404, message = "Registro não encontrado.", response = Comment.class),
