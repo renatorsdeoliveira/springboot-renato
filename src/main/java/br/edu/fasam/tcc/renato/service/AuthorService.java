@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
+/*
+ *Classe de negócio responsável para tratar informações referentes a author (Author)
+ */
 @Service
 public class AuthorService {
 
@@ -17,7 +19,7 @@ public class AuthorService {
         return authorRepository.save(author);
     }
 
-    public void deleteDoRenato(Author author){
+    public void delete(Author author){
         authorRepository.delete(author);
     }
 
