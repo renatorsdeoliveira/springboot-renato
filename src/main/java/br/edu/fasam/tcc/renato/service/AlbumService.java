@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
+/*
+ *Classe de negócio responsável para tratar informações referentes a album (Album)
+ */
 @Service
 public class AlbumService implements IService<Album, Integer> {
 
