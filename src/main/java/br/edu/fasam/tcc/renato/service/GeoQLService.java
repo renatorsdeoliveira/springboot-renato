@@ -17,7 +17,7 @@ public class GeoQLService {
         return geoQLRepository.save(geoQL);
     }
 
-    public void deleteDoRenato(GeoQL geoQL){
+    public void delete(GeoQL geoQL){
         geoQLRepository.delete(geoQL);
     }
 
